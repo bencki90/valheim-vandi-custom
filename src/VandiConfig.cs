@@ -29,6 +29,8 @@ namespace Vandi
         internal static ConfigEntry<bool> HarderBosses;
         internal static ConfigEntry<int> BossStarCap;
 
+        internal static ConfigEntry<bool> ExtraTrophies;
+
         internal static ConfigEntry<int> DoubleAtKills;
         internal static ConfigEntry<string> DoubleBosses;
         internal static ConfigEntry<string> NeverDouble;
@@ -106,6 +108,12 @@ namespace Vandi
                 + "is what a creature can reach in vanilla, and a two star boss hits hard "
                 + "enough that a third would be asking for a different party rather than a "
                 + "better one.");
+
+            ExtraTrophies = cfg.Bind("Bosses", "ExtraTrophies", true,
+                "A boss summoned with stars drops one more trophy for each star, so a two star "
+                + "boss drops three. The stars come from the summoner's own kills of that boss "
+                + "(see BossStarCap), so each boss is tracked separately. A boss with no stars "
+                + "drops one, as the game makes it.");
 
             // Kills, not stars: Vandi stores kills, and BossStarCap is a separate decision. Each
             // repeat kill adds a star, so the third kill is the one summoned at two stars, which

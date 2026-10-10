@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- **A boss with stars drops one more trophy per star.** A boss summoned at two stars drops three
+  trophies. The stars already come from the summoner's own kills of that boss, so it is tracked
+  per boss. New setting `ExtraTrophies`. Not run in game yet.
+
 - **A boss killed three times doubles the metal of its own biome, for you.** The third kill is
   the one summoned at two stars. Copper and tin for the Elder, iron for Bonemass, silver for
   Moder, black metal for Yagluth and flametal for Fader, worked out from what the furnace and

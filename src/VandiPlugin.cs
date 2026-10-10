@@ -98,6 +98,8 @@ namespace Vandi
                     + "The rest of Vandi is unaffected: " + error);
             }
 
+            PatchCore(typeof(Trophies));
+
             // One seam at a time, each on its own, so a game update that renames one of the
             // compendium's methods costs the page and never the star roll or the kill credit.
             PatchPage(typeof(CompendiumPage.ListPatch));
